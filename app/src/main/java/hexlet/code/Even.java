@@ -15,6 +15,7 @@ public final class Even extends Game {
     private final String message =
             "Answer 'yes' if number even otherwise answer 'no'.";
 
+    @Override
     public String getMessage() {
         return message;
     }
@@ -39,9 +40,5 @@ public final class Even extends Game {
         } else {
             answer = NO;
         }
-    }
-
-    private static int rand(final int min, final int max) {
-        return (int) ((Math.random() * (max - min)) + min);
     }
 }

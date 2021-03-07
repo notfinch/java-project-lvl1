@@ -11,6 +11,8 @@ public abstract class Game {
 
     public abstract String getQuestion();
 
+    public abstract String getMessage();
+
     public abstract void generateTour();
 
     public final void playGame(final String name,
@@ -38,7 +40,11 @@ public abstract class Game {
                     System.out.println("Let's try again, " + name + "!");
                 }
             }
-            System.out.println("Congratulations, " + name + "!");
         }
+        System.out.println("Congratulations, " + name + "!");
+    }
+
+    protected static int rand(final int min, final int max) {
+        return (int) ((Math.random() * (max - min)) + min);
     }
 }
