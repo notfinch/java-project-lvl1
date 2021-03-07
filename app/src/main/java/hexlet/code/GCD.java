@@ -32,6 +32,13 @@ public final class GCD extends Game {
         int firstNumber = rand(MIN_NUMBER, MAX_NUMBER);
         int secondNumber = rand(MIN_NUMBER, MAX_NUMBER);
         question = firstNumber + " " + secondNumber;
+        answer = String.valueOf(getGCDNumber(firstNumber, secondNumber));
+    }
+
+    private static int getGCDNumber(final int fNumber,
+                                    final int sNumber) {
+        int firstNumber = fNumber;
+        int secondNumber = sNumber;
         while (secondNumber != 0 && firstNumber != 0) {
             if (secondNumber > firstNumber) {
                 secondNumber = secondNumber % firstNumber;
@@ -39,6 +46,6 @@ public final class GCD extends Game {
                 firstNumber = firstNumber % secondNumber;
             }
         }
-        answer = String.valueOf(secondNumber + firstNumber);
+        return secondNumber + firstNumber;
     }
 }
