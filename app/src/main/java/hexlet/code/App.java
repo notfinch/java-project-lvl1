@@ -5,6 +5,7 @@ import main.java.hexlet.code.Even;
 import main.java.hexlet.code.Calc;
 import main.java.hexlet.code.GCD;
 import main.java.hexlet.code.Progression;
+import main.java.hexlet.code.Prime;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -20,6 +21,7 @@ public class App {
     private static final int CALC_CODE_GAME = 3;
     private static final int GCD_CODE_GAME = 4;
     private static final int PROGRESSION_CODE_GAME = 5;
+    private static final int PRIME_CODE_GAME = 6;
 
     public static void main(final String[] args) {
         System.out.println("Please enter the game number and press Enter.");
@@ -28,6 +30,7 @@ public class App {
                 + "3 - Calc\n"
                 + "4 - GCD\n"
                 + "5 - Progression\n"
+                + "6 - Prime\n"
                 + "0 - Exit\n"
                 + "Your choice: ");
         Scanner sc = new Scanner(System.in);
@@ -61,6 +64,12 @@ public class App {
                 String progressionPlayerName = Cli.greeting();
                 progressionGame.playGame(progressionPlayerName,
                         progressionGame.getMessage());
+                break;
+            case PRIME_CODE_GAME:
+                Prime primeGame = new Prime();
+                String primePlayerName = Cli.greeting();
+                primeGame.playGame(primePlayerName,
+                        primeGame.getMessage());
                 break;
             default:
                 //do nothing
