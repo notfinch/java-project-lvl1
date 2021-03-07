@@ -33,12 +33,12 @@ public class App {
                 Cli.greeting();
                 break;
             case EVEN_CODE_GAME:
+                Even game = new Even();
                 String name = Cli.greeting();
-                Even.playGame(name);
+                game.playGame(name, game.getMessage());
                 break;
             default:
                 //do nothing
         }
-
     }
 }
