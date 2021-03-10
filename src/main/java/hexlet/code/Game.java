@@ -26,9 +26,9 @@ public abstract class Game {
                 final String answer = getAnswer();
                 System.out.println("Question: " + question);
 
+                System.out.print("Your answer: ");
                 final String userAnswer = sc.next();
 
-                System.out.println("Your answer: " + userAnswer);
                 if (Objects.equals(answer, userAnswer)) {
                     System.out.println("Correct!");
                     break;
