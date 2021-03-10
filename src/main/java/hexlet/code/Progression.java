@@ -46,9 +46,6 @@ public final class Progression extends Game {
             } else {
                 question = question + currentNumber;
             }
-            if (i < (LENGTH - 1)) {
-                question = question + " ";
-            }
         }
     }
 }
